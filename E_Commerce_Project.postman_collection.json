@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "1b06de2b-fb30-4953-8adc-d6e3a06f094d",
+		"name": "E_Commerce_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32757783"
+	},
+	"item": [
+		{
+			"name": "getAllDetailsFromDB",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/getAllDetailsFromDB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"getAllDetailsFromDB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDataById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/flykart/getDataById?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"getDataById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveAddressAndUserDetailsToDB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"addressLine1\": \"vasen valley\",\r\n        \"addressLine2\": \"rettaiwaikal\",\r\n        \"city\": \"trichy\",\r\n        \"state\": \"tamilnadu\",\r\n        \"pincode\": 600098,\r\n        \"eCommerceUserDetails\": {\r\n            \"userName\": \"sriram\",\r\n            \"userPassword\": \"sriram2123\",\r\n            \"userPhoneNumber\": \"98232989876\",\r\n            \"userMailId\": \"sriram@gmail.com\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/saveAddressAndUserDetailsToDB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"saveAddressAndUserDetailsToDB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/db/updatetoyDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"toyId\": 8,\r\n        \"toyName\": \"bike\",\r\n        \"toyPrice\": 150,\r\n        \"toySize\": \"Medium\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/db/updatetoyDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"db",
+						"updatetoyDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/db/toDeleteOneToy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"toyId\": 2,\r\n        \"toyName\": \"bie\",\r\n        \"toyPrice\": 150,\r\n        \"toySize\": \"small\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/db/toDeleteOneToy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"db",
+						"toDeleteOneToy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/db/deleteAllToys",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/db/deleteAllToys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"db",
+						"deleteAllToys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProductCategoryRelationshipTable",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/getAllProductCategoryRelationshipTable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"getAllProductCategoryRelationshipTable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDataToProductCategoryRelationshipTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"productId\": {\r\n            \"productName\": \"rebok socks\",\r\n            \"listPrice\": 340,\r\n            \"salePrice\": 300,\r\n            \"productImageUrl\": \"rebok shoe url\",\r\n            \"productDescription\": \" sport wear socks very comfortable during playing\"\r\n        },\r\n        \"categoryId\": {\r\n            \"category_name\": \"socks\",\r\n            \"category_description\": \"used for shoes\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/addDataToProductCategoryRelationshipTable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"addDataToProductCategoryRelationshipTable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDataToProductCategoryRelationshipTable Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"productCategoryRelationshipId\": 7,\r\n        \"productId\": {\r\n            \"producId\": 7,\r\n            \"productName\": \"rebok socks\",\r\n            \"listPrice\": 340,\r\n            \"salePrice\": 300,\r\n            \"productImageUrl\": \"rebok socks url\",\r\n            \"productDescription\": \" sport wear socks very comfortable during playing\"\r\n        },\r\n        \"categoryId\": {\r\n            \"categoryId\": 4,\r\n            \"category_name\": \"socks\",\r\n            \"category_description\": \"used for shoes\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/updateDataProductCategoryRelationshipTable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"updateDataProductCategoryRelationshipTable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteoneDataFromProductCategoryRelationshipTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"productId\": {\r\n            \"productName\": \"rebok socks\",\r\n            \"listPrice\": 340,\r\n            \"salePrice\": 300,\r\n            \"productImageUrl\": \"rebok shoe url\",\r\n            \"productDescription\": \" sport wear socks very comfortable during playing\"\r\n        },\r\n        \"categoryId\": {\r\n            \"category_name\": \"socks\",\r\n            \"category_description\": \"used for shoes\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/deleteoneDataFromProductCategoryRelationshipTable?id=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"deleteoneDataFromProductCategoryRelationshipTable"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toGetAlltoGetAllOrderItem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"productId\": {\r\n            \"productName\": \"rebok socks\",\r\n            \"listPrice\": 340,\r\n            \"salePrice\": 300,\r\n            \"productImageUrl\": \"rebok shoe url\",\r\n            \"productDescription\": \" sport wear socks very comfortable during playing\"\r\n        },\r\n        \"categoryId\": {\r\n            \"category_name\": \"socks\",\r\n            \"category_description\": \"used for shoes\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/toGetAlltoGetAllOrderItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"toGetAlltoGetAllOrderItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toAddOrderItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \r\n        \"productId\": {\r\n            \"productName\": \"PUMA SPORT SHOE\",\r\n            \"listPrice\": 2500,\r\n            \"salePrice\": 1700,\r\n            \"productImageUrl\": \"puma shoe url\",\r\n            \"productDescription\": \" sports wear used for sports activities like playing, walking.\"\r\n        },\r\n        \"price\": 1600.0,\r\n        \"tax\": 100.0,\r\n        \"quantity\": 1,\r\n        \"cartId\": {\r\n            \"totalPrice\": 1600.0,\r\n            \"totalTax\": 100.0,\r\n            \"deliveryStatus\": \"delivered\",\r\n            \"addressId\": {\r\n                \"addressLine1\": \"rcwestminsterFlats\",\r\n                \"addressLine2\": \"Moolakadai\",\r\n                \"city\": \"chennai\",\r\n                \"state\": \"tamilnadu\",\r\n                \"pincode\": 600118,\r\n                \"eCommerceUserDetails\": {\r\n                    \"userName\": \"priyavarshini\",\r\n                    \"userPassword\": \"priya\",\r\n                    \"userPhoneNumber\": \"999999999\",\r\n                    \"userMailId\": \"priya@gmail.com\"\r\n                }\r\n            },\r\n            \"userId\": {\r\n                    \"userName\": \"priyavarshini\",\r\n                    \"userPassword\": \"priya\",\r\n                    \"userPhoneNumber\": \"999999999\",\r\n                    \"userMailId\": \"priya@gmail.com\"\r\n            }\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/addOrderItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"addOrderItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCartDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \r\n        \"productId\": {\r\n            \"productName\": \"PUMA SPORT SHOE\",\r\n            \"listPrice\": 2500,\r\n            \"salePrice\": 1700,\r\n            \"productImageUrl\": \"puma shoe url\",\r\n            \"productDescription\": \" sports wear used for sports activities like playing, walking.\"\r\n        },\r\n        \"price\": 1600.0,\r\n        \"tax\": 100.0,\r\n        \"quantity\": 1,\r\n        \"cartId\": {\r\n            \"totalPrice\": 1600.0,\r\n            \"totalTax\": 100.0,\r\n            \"deliveryStatus\": \"delivered\",\r\n            \"addressId\": {\r\n                \"addressLine1\": \"rcwestminsterFlats\",\r\n                \"addressLine2\": \"Moolakadai\",\r\n                \"city\": \"chennai\",\r\n                \"state\": \"tamilnadu\",\r\n                \"pincode\": 600118,\r\n                \"eCommerceUserDetails\": {\r\n                    \"userName\": \"priyavarshini\",\r\n                    \"userPassword\": \"priya\",\r\n                    \"userPhoneNumber\": \"999999999\",\r\n                    \"userMailId\": \"priya@gmail.com\"\r\n                }\r\n            },\r\n            \"userId\": {\r\n                    \"userName\": \"priyavarshini\",\r\n                    \"userPassword\": \"priya\",\r\n                    \"userPhoneNumber\": \"999999999\",\r\n                    \"userMailId\": \"priya@gmail.com\"\r\n            }\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flykart/getAllCartDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flykart",
+						"getAllCartDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
