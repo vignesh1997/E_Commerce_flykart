@@ -1,4 +1,4 @@
-package com.example.model;
+	package com.example.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -26,17 +26,17 @@ public class Cart {
 	private String deliveryStatus;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "address_id",referencedColumnName ="address_id")
-	private E_Commerce_AddressDetails addressId;
+	private ECommerceAddressDetails addressId;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="user_id",referencedColumnName = "user_id")
-	private E_Commerce_UserDetails userId;
+	private ECommerceUserDetails userId;
 	
 	public Cart() {
 		super();
 	}
 
 	public Cart(Integer cartId, double totalPrice, double totalTax, String deliveryStatus,
-			E_Commerce_AddressDetails addressId, E_Commerce_UserDetails userId) {
+			ECommerceAddressDetails addressId, ECommerceUserDetails userId) {
 		super();
 		this.cartId = cartId;
 		this.totalPrice = totalPrice;
@@ -78,19 +78,19 @@ public class Cart {
 		this.deliveryStatus = deliveryStatus;
 	}
 
-	public E_Commerce_AddressDetails getAddressId() {
+	public ECommerceAddressDetails getAddressId() {
 		return addressId;
 	}
 
-	public void setAddressId(E_Commerce_AddressDetails addressId) {
+	public void setAddressId(ECommerceAddressDetails addressId) {
 		this.addressId = addressId;
 	}
 
-	public E_Commerce_UserDetails getUserId() {
+	public ECommerceUserDetails getUserId() {
 		return userId;
 	}
 
-	public void setUserId(E_Commerce_UserDetails userId) {
+	public void setUserId(ECommerceUserDetails userId) {
 		this.userId = userId;
 	}
 	

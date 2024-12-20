@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity(name="E_Commerce_AddressDetails")
 @Table(name="address_details")
-public class E_Commerce_AddressDetails {
+public class ECommerceAddressDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="address_id")
@@ -29,14 +29,14 @@ public class E_Commerce_AddressDetails {
 	private Integer pincode;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id",referencedColumnName ="user_id")
-	private E_Commerce_UserDetails eCommerceUserDetails;
+	private ECommerceUserDetails eCommerceUserDetails;
 	
-	public E_Commerce_AddressDetails() {
+	public ECommerceAddressDetails() {
 		super();
 	}
 
-	public E_Commerce_AddressDetails(Integer addressId, String addressLine1, String addressLine2, String city, String state,
-			Integer pincode, E_Commerce_UserDetails eCommerceUserDetails) {
+	public ECommerceAddressDetails(Integer addressId, String addressLine1, String addressLine2, String city, String state,
+			Integer pincode, ECommerceUserDetails eCommerceUserDetails) {
 		super();
 		this.addressId = addressId;
 		this.addressLine1 = addressLine1;
@@ -95,11 +95,11 @@ public class E_Commerce_AddressDetails {
 		this.pincode = pincode;
 	}
 
-	public E_Commerce_UserDetails geteCommerceUserDetails() {
+	public ECommerceUserDetails geteCommerceUserDetails() {
 		return eCommerceUserDetails;
 	}
 
-	public void seteCommerceUserDetails(E_Commerce_UserDetails eCommerceUserDetails) {
+	public void seteCommerceUserDetails(ECommerceUserDetails eCommerceUserDetails) {
 		this.eCommerceUserDetails = eCommerceUserDetails;
 	}
 	
